@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "phonenumberextractor"
+version = "0.1.0"
+description = ""
+authors = ["test <test@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.14"
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+pyperclip = "^1.9.0"
+
+[tool.poetry.scripts]
+dev = "phonenumberextractor.main:main"
+logo = "phonenumberextractor.logo:main"
+
+[tool.poetry.group.dev.dependencies]
+watchdog = "^6.0.0"
+pyinstaller = "^6.11.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
