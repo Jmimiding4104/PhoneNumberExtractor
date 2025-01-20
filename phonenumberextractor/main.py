@@ -2,11 +2,10 @@ import pandas as pd
 import re
 import tkinter as tk
 import pyperclip
-import base64, os
+import os
 import sys
 
 from tkinter import filedialog, messagebox
-from logo import img
 
 def resource_path(relative_path):
     """獲取資源的絕對路徑"""
@@ -66,11 +65,9 @@ def save_file():
 root = tk.Tk()
 root.title("佩佩專用診篩工具")
 
-ico = open('unicorn.ico', 'wb+')
-ico.write(base64.b64decode(img)) # 寫一個icon出來
-ico.close()
-root.iconbitmap('unicorn.ico') # 將icon嵌上視窗
-os.remove('unicorn.ico') # 把剛剛用完的檔案刪掉
+# 設定應用程式圖示
+icon_path = resource_path('phonenumberextractor\icon\icon-1.ico')
+root.iconbitmap(icon_path)
 
 # 設定 UI 元素
 open_button = tk.Button(root, text="選擇 Excel 檔案", command=open_file)

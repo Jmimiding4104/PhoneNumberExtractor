@@ -3,9 +3,9 @@
 
 a = Analysis(
     ['phonenumberextractor\\main.py'],
-    pathex=[],
+    pathex=['C:\\Users\\update.LAPTOP-UBUBFDNP\\Desktop\\PhoneNumberExtractor'],
     binaries=[],
-    datas=[],
+    datas=[('./phonenumberextractor/icon/icon-1.ico', 'phonenumberextractor/icon/icon-1.ico')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -35,4 +35,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon='./phonenumberextractor/icon/icon.ico',
 )
