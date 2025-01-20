@@ -64,7 +64,7 @@ def save_file():
 
 # GUI 設定
 root = tk.Tk()
-root.title("佩佩專用診篩工具")
+root.title("佩玲專用診篩準備工具")
 
 ico = open('unicorn.ico', 'wb+')
 ico.write(base64.b64decode(img)) # 寫一個icon出來
