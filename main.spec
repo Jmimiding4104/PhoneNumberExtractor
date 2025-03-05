@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='佩玲專用診篩準備工具',
+    name='main',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -35,5 +35,4 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='icon/icon.ico'
 )

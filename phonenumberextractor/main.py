@@ -23,6 +23,9 @@ phone_pattern = r'09\d{8}'
 def extract_phone_numbers(cell):
     """從一個儲存格中提取手機號碼，並確保號碼以 09 開頭"""
     if isinstance(cell, str):  # 確保是字串
+        # 移除所有非數字字符
+        cell = re.sub(r'\D', '', cell)
+        
         # 如果號碼沒有以 09 開頭，手動加上
         if not cell.startswith('09'):
             cell = '0' + cell  # 為缺少 09 的號碼加上 09
